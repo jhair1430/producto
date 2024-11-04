@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Productos - Ciberseguridad</title>
+    
+    <!-- Integración de Bootstrap para estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+    
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .navbar {
+            background-color: #004085;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .jumbotron {
+            background: url('img/peru-banner.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 5rem 2rem;
+            margin-bottom: 2rem;
+        }
+        .jumbotron h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .jumbotron p {
+            font-size: 1.5rem;
+        }
+        .table thead {
+            background-color: #004085;
+            color: #fff;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        /* Estilos de los botones personalizados de PayPal */
+        .pp-button {
+            text-align: center;
+            border: none;
+            border-radius: 1.5rem;
+            min-width: 11.625rem;
+            padding: 0 2rem;
+            height: 2.625rem;
+            font-weight: bold;
+            background-color: #FFD140;
+            color: #000000;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">CiberSeguridad Perú</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Nuestros Productos de Ciberseguridad</h1>
+            <p class="lead">Protegiendo la información y asegurando sistemas en todo el Perú.</p>
+        </div>
+    </div>
+
+    <!-- Tabla de productos -->
+    <div class="container">
+        <h2 class="mb-4">Catálogo de Productos</h2>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Comprar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CS101</td>
+                    <td>Firewall de Red</td>
+                    <td>$800</td>
+                    <td>
+                        <input type="number" class="form-control" min="1" value="1" id="cantidad-CS101" />
+                    </td>
+                    <td>
+                        <!-- Botón de PayPal para Firewall de Red -->
+                        <div id="paypal-container-YEKGQCPK3ZWU4"></div>
+                        <script src="https://www.paypal.com/sdk/js?client-id=BAAWdQO-AVLel52mKv5VE9h6PZESJ-IGcT8v0s_ZfSlkj3b-0SGnqkDw0GUdzqMiwB70RM19OSCBn-PxPo&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+                        <script>
+                          paypal.HostedButtons({
+                            hostedButtonId: "YEKGQCPK3ZWU4",
+                          }).render("#paypal-container-YEKGQCPK3ZWU4");
+                        </script>
+                        <button class="pp-button" onclick="comprar('Firewall de Red', 800, 'CS101')">Comprar ahora</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CS102</td>
+                    <td>Antivirus Avanzado</td>
+                    <td>$500</td>
+                    <td>
+                        <input type="number" class="form-control" min="1" value="1" id="cantidad-CS102" />
+                    </td>
+                    <td>
+                        <!-- Botón de PayPal para Antivirus Avanzado -->
+                        <div id="paypal-container-9ZXV2B6864AB2"></div>
+                        <script>
+                          paypal.HostedButtons({
+                            hostedButtonId: "9ZXV2B6864AB2",
+                          }).render("#paypal-container-9ZXV2B6864AB2");
+                        </script>
+                        <button class="pp-button" onclick="comprar('Antivirus Avanzado', 500, 'CS102')">Comprar ahora</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CS103</td>
+                    <td>Sistema de Detección de Intrusos (IDS)</td>
+                    <td>$2800</td>
+                    <td>
+                        <input type="number" class="form-control" min="1" value="1" id="cantidad-CS103" />
+                    </td>
+                    <td>
+                        <!-- Botón de PayPal para Sistema de Detección de Intrusos (IDS) -->
+                        <div id="paypal-container-5YGTZ8TSV7T54"></div>
+                        <script>
+                          paypal.HostedButtons({
+                            hostedButtonId: "5YGTZ8TSV7T54",
+                          }).render("#paypal-container-5YGTZ8TSV7T54");
+                        </script>
+                        <button class="pp-button" onclick="comprar('Sistema de Detección de Intrusos (IDS)', 2800, 'CS103')">Comprar ahora</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CiberSeguridad Perú. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Integración de jQuery, Popper.js, y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        function comprar(nombreProducto, precio, codigoProducto) {
+            const cantidad = document.getElementById(`cantidad-${codigoProducto}`).value;
+            const total = precio * cantidad;
+            alert(`Compra exitosa: ${cantidad} x ${nombreProducto} - Total: $${total}`);
+            // Aquí puedes agregar la lógica para redirigir a PayPal o registrar la compra
+        }
+    </script>
+</body>
+</html>
